@@ -39,6 +39,7 @@ This repository implements a **machine learning workflow** to:
 ---
 
 ## Repository Structure
+```bash
 xrd_classification
 │
 ├── README.md
@@ -63,7 +64,7 @@ xrd_classification
 ├── data_cleaning/
 ├── pipeline/
 └── data/
-
+```
 
 ---
 
