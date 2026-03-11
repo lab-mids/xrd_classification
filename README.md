@@ -167,6 +167,7 @@ clean_comp_compare.ipynb
 These notebooks compare similarity strategies and retrieval performance.
 
 6. Identify the most distant test samples in the embedding space
+
 Run:
 tsne_testsets_cs_ruff.ipynb
 
