@@ -1,40 +1,54 @@
 # XRD Phase Identification via Representation Learning and Similarity Retrieval
 
-This repository provides a research implementation for automated analysis of **X-ray diffraction (XRD) patterns** using representation learning and similarity-based retrieval.  
-The project focuses on building latent feature spaces that capture structural relationships between diffraction patterns and support phase identification in high-throughput materials experiments.
 
+This repository provides a research implementation for automated analysis of X-ray diffraction (XRD) patterns using representation learning and similarity-based retrieval.
+The project focuses on constructing latent feature spaces that capture structural relationships between diffraction patterns and support phase identification and structural reasoning in high-throughput materials experiments.
 ---
 
 ## Overview
 
-X-ray diffraction is a fundamental characterization technique for determining crystalline structure and identifying material phases.  
+X-ray diffraction is a fundamental characterization technique for determining crystalline structure and identifying material phases.
 However, interpretation of diffraction patterns becomes challenging in:
 
-- combinatorial materials libraries  
-- multi-component systems  
-- noisy experimental measurements  
-- peak shifts caused by strain or composition variation  
-- large-scale high-throughput screening pipelines  
+- combinatorial materials libraries
 
-This repository implements a **machine learning workflow** to:
+- multi-component systems
 
-- learn compact latent representations of diffraction patterns  
-- compare structural similarity between samples  
-- perform retrieval-based phase analysis  
-- analyze embedding geometry and clustering behavior  
-- support exploratory materials informatics research  
+- noisy experimental measurements
+
+- peak shifts caused by strain, defects, or composition variation
+
+- large-scale high-throughput screening pipelines
+
+- This repository implements a machine learning workflow that enables:
+
+- learning compact latent representations of diffraction patterns
+
+- measuring structural similarity between samples
+
+- retrieval-based phase analysis
+
+- explainability analysis using attribution methods
+
+- exploratory materials informatics studies
 
 ---
 
 ## Key Features
 
-- Deep representation learning for XRD signals  
-- Latent embedding extraction and comparison  
-- Similarity-based retrieval of structurally related samples  
-- Internal geometry analysis of learned feature spaces  
-- t-SNE visualization of embedding distributions  
-- Composition-aware query experiments  
-- Experimental evaluation notebooks for multiple datasets  
+- Deep representation learning models for XRD signals
+
+- Latent embedding extraction for structural comparison
+
+- Similarity-based retrieval of structurally related diffraction patterns
+
+- Integrated Gradients analysis for interpretability of model predictions
+
+- t-SNE visualization of embedding distributions
+
+- Composition-aware query experiments
+
+- Experimental evaluation notebooks for multiple datasets
 
 ---
 
@@ -81,7 +95,7 @@ Distances in the latent space (e.g., cosine similarity) are used to:
 
 - retrieve nearest structural neighbors  
 - support phase candidate ranking  
-- analyze relationships between materials  
+
 
 ### Internal Geometry Analysis
 
@@ -91,13 +105,7 @@ The repository includes experiments that study:
 - separation between structural classes  
 - influence of dataset composition  
 
-### Visualization
 
-Dimensionality-reduction techniques such as t-SNE are used to visualize:
-
-- embedding distributions  
-- class separability  
-- retrieval neighborhoods  
 
 ---
 
@@ -142,7 +150,7 @@ query_composition.ipynb
 
 These notebooks demonstrate similarity search and composition-aware querying.
 
-4. Analyze Embedding Geometry
+4. Analyze Model Explanations and Embeddings
 
 Use analysis notebooks:
 
@@ -150,19 +158,20 @@ IG_Data_CS_analysis.ipynb
 
 IG_Data_SG_analysis.ipynb
 
-tsne_testsets_cs_ruff.ipynb
 
-These explore clustering behavior and latent-space structure.
+These explore attribution patterns and latent-space structure.
 
-5. Evaluate Similarity Metrics
+5. Evaluate Similarity Metrics of Qwen and Magpie
 
 Run:
-
-XRD_sum_cosin.ipynb
-
 clean_comp_compare.ipynb
 
 These notebooks compare similarity strategies and retrieval performance.
+
+6. To get the faherthest point of the test sample
+Run:
+tsne_testsets_cs_ruff.ipynb
+
 
 Applications
 
