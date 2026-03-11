@@ -104,9 +104,6 @@ The repository includes experiments that study:
 - clustering behavior of embeddings  
 - separation between structural classes  
 - influence of dataset composition  
-
-
-
 ---
 
 ## Installation
@@ -116,8 +113,9 @@ Clone the repository:
 ```bash
 git clone https://github.com/lab-mids/xrd_classification.git
 cd xrd_classification
-```
 pip install -r requirements.txt
+```
+
 
 Typical Workflow
 1. Train Representation Models
@@ -168,7 +166,7 @@ clean_comp_compare.ipynb
 
 These notebooks compare similarity strategies and retrieval performance.
 
-6. To get the faherthest point of the test sample
+6. Identify the most distant test samples in the embedding space
 Run:
 tsne_testsets_cs_ruff.ipynb
 
