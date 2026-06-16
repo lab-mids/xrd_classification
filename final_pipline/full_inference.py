@@ -142,7 +142,9 @@ def plot_inference_cs_sg(
     if save_path:
         plt.savefig(save_path, bbox_inches="tight", dpi=300)
 
-    plt.show()
+    plt.close(fig)
+
+    return fig
 
 
 
@@ -309,7 +311,7 @@ def infer_cs_and_sg_once(
                 len(out_cs["x_input"])
             )
 
-        plot_inference_cs_sg(
+        fig = plot_inference_cs_sg(
             result_cs=out_cs,
             result_sg=out_sg,
             xaxis=xaxis,
@@ -321,5 +323,6 @@ def infer_cs_and_sg_once(
     return {
         "cs": out_cs,
         "sg": out_sg,
-        "composition": comp
+        "composition": comp,
+        "figure": fig if do_plot else None
     }
